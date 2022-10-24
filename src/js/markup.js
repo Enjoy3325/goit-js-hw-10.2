@@ -37,9 +37,9 @@ function onMurkupListCountry(countryArr) {
 export function markupCountry(res) {
   // Умова через else if
   if (res.length > 10) {
-    // return Notiflix.Notify.info(
-    //   'Too many matches found. Please enter a more specific name.'
-    // );
+    return Notiflix.Notify.info(
+      'Too many matches found. Please enter a more specific name.'
+    );
   } else if (res.length === 1) {
     onMarkupOneCountry(res);
     refs.countryList.innerHTML = '';
@@ -49,24 +49,20 @@ export function markupCountry(res) {
   }
 }
 
-//
-//  <p  class="country-info__><span class ="country-info__performance">Currency symbol:</span>${country.currencies.name}</p>
-// <p  class="country-info__><span class ="country-info__performance">Car code:</span>${country.car.signs}</p>
-// <p  class="country-info__><span class ="country-info__performance">Google map of the country:</span>${country.maps.googleMaps}</p>`;
-
 // Умова через switch
-//  switch (res.length) {
-//    case '>10':
-//      Notiflix.Notify.info(
-//        'Too many matches found. Please enter a more specific name.'
-//      );
-//      break;
-//    case '=== 1':
-//      onMarkupOneCountry(res);
-//      refs.countryList.innerHTML = '';
-//      break;
-//    default:
-//      onMurkupListCountry(res);
-//      refs.infoCountry.innerHTML = '';
-//      break;
-//  }
+
+// switch (res.length) {
+//   case '=10':
+//     Notiflix.Notify.info(
+//       'Too many matches found. Please enter a more specific name.'
+//     );
+//     break;
+//   case '=== 1':
+//     onMarkupOneCountry(res);
+//     refs.countryList.innerHTML = '';
+//     break;
+//   default:
+//     onMurkupListCountry(res);
+//     refs.infoCountry.innerHTML = '';
+//     break;
+// }

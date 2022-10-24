@@ -4,7 +4,6 @@ import { refs } from './js/refs';
 
 import Notiflix from 'notiflix';
 import debounce from 'lodash.debounce';
-// import './css/styles.css';
 import './sass/_example.scss';
 
 const DEBOUNCE_DELAY = 300;
