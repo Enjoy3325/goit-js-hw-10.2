@@ -27,7 +27,7 @@ function onMurkupListCountry(countryArr) {
   refs.countryList.innerHTML = countryArr
     .map(country => {
       return `<li class="country-list__item">
-    <img class="country-list__flags" src="${country.flags.svg}" alt="${country.name.official}" width="65" />
+    <img class="country-list__flags" src="${country.flags.svg}" alt="${country.name.official}" width="80" />
     <h2 class="country-list__name">${country.name.official}</h2>
   </li>
   `;
@@ -47,7 +47,16 @@ export function markupCountry(res) {
     onMurkupListCountry(res);
     refs.infoCountry.innerHTML = '';
   }
-}
+//   refs.countryList
+//     .addClass('.country-list')
+//     .addEventListener('click', event => {
+//       countryList = event.target.elements.value;
+//       console.log(countryList);
+//       if (countryList) {
+//         markupCountry();
+//       }
+//     });
+// }
 
 // Умова через switch
 

@@ -79,7 +79,15 @@ input[type='text'] {
 }
 .country-list {
   list-style: none;
-  display: flex;
+  display: inline-block;
+  column-count: 2;
+  padding: 0;
 
-  flex-direction: column-reverse;
+  &__item {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 30px;
+    text-align: center;
+  }
 }
